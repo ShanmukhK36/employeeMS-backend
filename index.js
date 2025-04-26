@@ -29,6 +29,10 @@ app.use("/api/leave", leaveRouter);
 app.use("/api/setting", settingRouter);
 app.use("/api/dashboard", dashboardRouter);
 
+app.get("/", (req, res) => {
+    res.send("🚀 Employee Management System Backend is Running!");
+  });
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is Running on port ${process.env.PORT}`);
 });
