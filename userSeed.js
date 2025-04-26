@@ -18,4 +18,4 @@ const userRegister = async () => {
     }
 }
 
-export default userRegister
+export {userRegister}
