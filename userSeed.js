@@ -14,8 +14,8 @@ const userRegister = async () => {
         })
         await newUser.save()
     } catch(error) {
-        console.log(error);
+        console.log(error.message);
     }
 }
 
-userRegister();
+export default userRegister
