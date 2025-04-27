@@ -11,7 +11,7 @@ import connectToDatabase from "./db/db.js";
 import {userRegister} from "./userSeed.js"
 
 connectToDatabase();
-userRegister()
+
 const app = express();
 app.use(
   cors({
@@ -30,6 +30,7 @@ app.use("/api/setting", settingRouter);
 app.use("/api/dashboard", dashboardRouter);
 
 app.get("/", (req, res) => {
+    userRegister()
     res.send("🚀 Employee Management System Backend is Running!");
   });
 
